@@ -15,6 +15,9 @@ public class RegistroCartorioTO {
     private String enderecoCartorio;
 
     @NotNull
+    private String estadoCartorio;
+
+    @NotNull
     private String tiposCertidoes;
 
 
@@ -23,13 +26,16 @@ public class RegistroCartorioTO {
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id;}
 
-    public String getnomeCartorio() {return nomeCartorio;}
+    public String getNomeCartorio() {return nomeCartorio;}
     public void setNomeCartorio(String nomeCartorio) {this.nomeCartorio = nomeCartorio;}
 
-    public String getenderecoCartorio() {return enderecoCartorio;}
-    public void setenderecoCartorio(String enderecoCartorio) {this.enderecoCartorio = enderecoCartorio;}
+    public String getEnderecoCartorio() {return enderecoCartorio;}
+    public void setEnderecoCartorio(String enderecoCartorio) {this.enderecoCartorio = enderecoCartorio;}
 
-    public String gettiposCertidoes() {return tiposCertidoes;}
-    public void settiposCertidoes(String tiposCertidoes) {this.tiposCertidoes = tiposCertidoes;}
+    public String getEstadoCartorio() {return estadoCartorio;}
+    public void setEstadoCartorio(String estadoCartorio) { this.estadoCartorio = estadoCartorio;}
+
+    public String getTiposCertidoes() {return tiposCertidoes;}
+    public void setTiposCertidoes(String tiposCertidoes) {this.tiposCertidoes = tiposCertidoes;}
 
 }

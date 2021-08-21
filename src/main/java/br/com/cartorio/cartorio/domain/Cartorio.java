@@ -21,6 +21,9 @@ public class Cartorio {
     @Column(name = "ENDERECO_CARTORIO")
     private String enderecoCartorio;
 
+    @Column(name = "ESTADO_CARTORIO")
+    private String estadoCartorio;
+
     @Column(name = "TIPOS_CERTIDOES")
     private String tiposCertidoes;
 
@@ -32,9 +35,10 @@ public class Cartorio {
 
     public Cartorio(RegistroCartorioTO registroCartorioTO){
         this.id = registroCartorioTO.getId();
-        this.nomeCartorio = registroCartorioTO.getnomeCartorio();
-        this.enderecoCartorio = registroCartorioTO.getenderecoCartorio();
-        this.tiposCertidoes = registroCartorioTO.gettiposCertidoes();
+        this.nomeCartorio = registroCartorioTO.getNomeCartorio();
+        this.enderecoCartorio = registroCartorioTO.getEnderecoCartorio();
+        this.estadoCartorio = registroCartorioTO.getEstadoCartorio();
+        this.tiposCertidoes = registroCartorioTO.getTiposCertidoes();
     }
 
     // Getters e Setters
@@ -44,13 +48,13 @@ public class Cartorio {
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id;}
 
-    public String getnomeCartorio() {return nomeCartorio;}
+    public String getNomeCartorio() {return nomeCartorio;}
     public void setNomeCartorio(String nomeCartorio) {this.nomeCartorio = nomeCartorio;}
 
-    public String getenderecoCartorio() {return enderecoCartorio;}
-    public void setenderecoCartorio(String enderecoCartorio) {this.enderecoCartorio = enderecoCartorio;}
+    public String getEnderecoCartorio() {return enderecoCartorio;}
+    public void setEnderecoCartorio(String enderecoCartorio) {this.enderecoCartorio = enderecoCartorio;}
 
-    public String gettiposCertidoes() {return tiposCertidoes;}
-    public void settiposCertidoes(String tiposCertidoes) {this.tiposCertidoes = tiposCertidoes;}
+    public String getTiposCertidoes() {return tiposCertidoes;}
+    public void setTiposCertidoes(String tiposCertidoes) {this.tiposCertidoes = tiposCertidoes;}
 
 }
