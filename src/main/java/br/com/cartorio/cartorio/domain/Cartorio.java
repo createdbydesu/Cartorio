@@ -29,10 +29,9 @@ public class Cartorio {
 
     // Construtor
 
-    public Cartorio(){
+    public Cartorio (){
 
     }
-
     public Cartorio(RegistroCartorioTO registroCartorioTO){
         this.id = registroCartorioTO.getId();
         this.nomeCartorio = registroCartorioTO.getNomeCartorio();
@@ -42,8 +41,6 @@ public class Cartorio {
     }
 
     // Getters e Setters
-
-    // se mais pra frente der erro, tenta colocar os getters e setter com letra maiuscula getNomeCartorio
 
     public Long getId() {return id;}
     public void setId(Long id) {this.id = id;}
