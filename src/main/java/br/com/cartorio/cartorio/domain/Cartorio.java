@@ -54,4 +54,7 @@ public class Cartorio {
     public String getTiposCertidoes() {return tiposCertidoes;}
     public void setTiposCertidoes(String tiposCertidoes) {this.tiposCertidoes = tiposCertidoes;}
 
+    public String getEstadoCartorio() {return estadoCartorio;}
+    public void setEstadoCartorio(String estadoCartorio) {this.estadoCartorio = estadoCartorio;}
+
 }

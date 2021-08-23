@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Lista de Cartorios</title>
+    <link rel="stylesheet" th:href="@{/list.css}">
 </head>
 <body>
 
+<div class="banner">
+
+    <div class="content">
+        <h2> Cartorios Registrados </h2>
+
+        <table th:if="${not #lists.isEmpty(listarCartorio)}" id="customers">
+            <tr>
+                <th>ID</th>
+                <th>Nome Cartorio</th>
+                <th>Endereço Cartorio</th>
+                <th>Tipos Certidão</th>
+                <th>Estado Cartorio</th>
+                <th>Ação</th>
+            </tr>
+
+            <tr th:each="cartorio : ${listarCartorio}">
+                <td th:text="${cartorio.id}"></td>
+                <td th:text="${cartorio.nomeCartorio}"></td>
+                <td th:text="${cartorio.enderecoCartorio}"></td>
+                <td th:text="${cartorio.tiposCertidoes}"></td>
+                <td th:text="${cartorio.estadoCartorio}"></td>
+
+
+
+                <td>
+                    <a class="btn-update" th:href="@{cartorios/atualizarCartorio/{id}(id=${cartorio.id})}">Atualizar</a>
+
+                    <a class="btn-delete" th:href="@{cartorios/deletarCartorio/{id}(id=${cartorio.id})}">Deletar</a> <!--colocar o th no href-->
+                </td>
+
+            </tr>
+
+
+        </table>
+
+        <a class="btn-register" th:href="@{cartorios/registroCartorio}">Novo Registro</a>
+
+    </div>
 </body>
 </html>

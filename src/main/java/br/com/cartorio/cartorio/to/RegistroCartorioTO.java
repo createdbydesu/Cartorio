@@ -1,6 +1,7 @@
 package br.com.cartorio.cartorio.to;
 
 import com.sun.istack.NotNull;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.UniqueConstraint;
 
@@ -11,6 +12,7 @@ public class RegistroCartorioTO {
     @NotNull
     private String nomeCartorio;
 
+    //@UniqueElements
     @NotNull
     private String enderecoCartorio;
 

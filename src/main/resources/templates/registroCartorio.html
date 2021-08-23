@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link th:href="@{/style.css}" rel="stylesheet">
+        <title>Registro de Cartórios</title>
+    </head>
+    <body>
+    <div class="container">
+        <div class="title">
+            Registrar Cartório
+        </div>
+        <form th:action="@{/cartorios/registroCartorio}" method="POST">
+            <div class="user-details">
+
+                <input type="hidden" name="id" th:value="${cartorio?.id}">
+
+                <div class="input-box">
+                    <span class="details">Nome do Cartório</span>
+                    <input type="text" id="nomeCartorio" name="nomeCartorio" th:value="${cartorio?.nomeCartorio}" placeholder="Insira o Nome" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Endereço do Cartório</span>
+                    <input type="text" id="enderecoCartorio" name="enderecoCartorio" th:value="${cartorio?.enderecoCartorio}" placeholder="Insira o Endereço" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Estado do Cartório</span>
+                    <input type="text" id="estadoCartorio" name="estadoCartorio" th:value="${cartorio?.estadoCartorio}" placeholder="Insira o Estado" required>
+                </div>
+
+                <input class="input-box" list="tiposCertidoesLista"  name="tiposCertidoes" id="tiposCertidoes" placeholder="Tipo(s) de Certidão(ões)">
+                <datalist id="tiposCertidoesLista">
+                    <option value="Certidão de Casamento">
+                    <option value="Certidão de Nascimento">
+                    <option value="Certidão de Óbito">
+                    <option value="Certidões: Casamento + Óbito">
+                    <option value="Certidões: Casamento + Nascimento">
+                    <option value="Certidões: Nascimento + Óbito">
+                </datalist>
+
+            <div class="button">
+                <input th:if="${not #bools.isTrue(editar)}" type="submit" value="Cadastrar">
+                <input th:if="${#bools.isTrue(editar)}" th:formaction="@{/cartorios/atualizar}" type="submit" value="Atualizar"/>
+            </div>
+        </form>
+    </div>
+    </body>
+</html>

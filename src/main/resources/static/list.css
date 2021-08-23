@@ -1,0 +1,140 @@
+*{
+	margin:0px;	
+	font-family: Century gothic, Verdana;
+}
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(228, 228, 228);
+  background-size: cover;
+  background-position: center;
+}
+
+h2{
+    color: #5b4c80;
+}
+.content{
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  
+}
+
+.content h2{
+  padding: 50px ;
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+/* TABLE */
+
+
+table {
+	width: 60%;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: absolute;
+    border-radius: 3px;
+    left: 20%;
+    top: 100%;
+}
+
+th {
+    padding: 7px;
+    text-align: center;
+    background: #5b4c80; 
+}
+
+tr {
+    background-color: rgba(0, 0, 0, 0.151);
+    transition: 0.5s;
+}
+
+tr:hover {
+    background-color: rgba(49, 49, 49, 0.192);
+    transition: 0.5s;
+}
+
+
+td a{
+    margin: 0;
+    padding: 3px;
+    display: inline-block;
+    width: 45%;
+    text-align: center;    
+}
+
+
+/* BUTTONS */
+
+.btn-update{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(138, 138, 138, 0.116);
+    transition: 0.4s;
+}
+
+.btn-update:hover{
+    background-color: #9a86d0;
+    border-radius: 12px;
+    transition: 0.6s;
+}
+
+.btn-delete{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(138, 138, 138, 0.116);
+    transition: 0.5s;
+}
+
+.btn-delete:hover{
+    background-color: #9a86d0;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+
+.btn-register{
+    padding-top: 8px;
+    margin: auto;
+    position: absolute;
+    top: 580px;
+    right: 42%;
+    width: 200px;
+    height: 30px;
+    background-color: #5b4c80;
+    border: 1px solid #5b4c80;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.btn-register:hover{
+
+    border: 1px solid #9a86d0;
+    transition: 0.6s;
+    transform: scale(1.1);
+
+}
+
+
+
+
+
+ 
